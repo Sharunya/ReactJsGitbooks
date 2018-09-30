@@ -14,24 +14,25 @@ export default class SNews extends Component {
         }
     }
 
-    render() {
-        let data = this.props.data;
+    renderNews = (data) => {
         let newsTemplate;
         if (data.length > 0) {
             newsTemplate = data.map(function (item) {
                 return (
-                    <div key={item.id}>
-                        <CArticle data={item}/>
-                    </div>
+                    <CArticle key={item.id} data={item}/>
                 )
             });
         } else {
             newsTemplate = <p>К сожалению новостей нет</p>
         }
+        return newsTemplate;
+    };
 
+    render() {
+        let data = this.props.data;
         return (
             <div className="news">
-                {newsTemplate}
+                {this.renderNews(data)}
                 <strong className={'news__count ' + (data.length > 0 ? '' : 'none')}>
                     Всего новостей: {data.length}
                 </strong>
