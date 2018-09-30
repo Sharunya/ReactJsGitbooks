@@ -1,0 +1,21 @@
+{
+  "name": "redux-ru-tutorial",
+  "version": "1.0.0",
+  "description": "Redux RU tutorial",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "react-scripts start",
+    "start2": "node server.js"
+  },
+  "author": "Drvshar",
+  "license": "Drvshar",
+  "dependencies": {
+    "EventEmitter": "^1.0.0",
+    "react": "^16.5.2",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "express": "^4.16.3",
+    "prop-types": "latest"
+  }
+}
